@@ -1,0 +1,21 @@
+import json
+
+def parse() -> dict:
+    with open("./reports/test.json", "r") as report:
+        wapiti_report = json.load(report)
+        categories = []
+        descriptions = []
+        vulnerabilities = []
+        # Fetch categories that only have vulnerabilities and retrieve their description and mitigations
+        for category in wapiti_report["vulnerabilities"]:
+            if len(wapiti_report["vulnerabilities"][category]) != 0:
+                categories.append(category)
+        # Get description of each category
+        for category, data in wapiti_report["classifications"].items():
+            if category in categories:
+                descriptions.append(data)
+        # Get vulnerabilities
+        for category in categories:
+            for vulnerability in wapiti_report["vulnerabilities"][category]:
+                vulnerabilities.append({category: vulnerability})
+        return {"categories": categories, "descriptions": descriptions, "vulnerabilities": vulnerabilities}
