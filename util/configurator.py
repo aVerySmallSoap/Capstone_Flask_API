@@ -2,6 +2,8 @@ from typing import LiteralString
 
 #TODO: Change default modules so scanning will be faster
 #TODO: Limit the scan to at least 10 pages and with a depth of 3
+#TODO: An average full wapiti scan takes about ~30 mins
+#TODO: Each user has a separate scan configuration
 class Configurator:
     """Handles the configuration of the wapiti library.
     Any additional arguments passed to this class are passed to wapiti.

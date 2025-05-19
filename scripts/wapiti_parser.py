@@ -17,5 +17,17 @@ def parse() -> dict:
         # Get vulnerabilities
         for category in categories:
             for vulnerability in wapiti_report["vulnerabilities"][category]:
+                for key, value in vulnerability.items(): # Normalize levels into CVE standard format
+                    if key == "level":
+                        match value:
+                            case 1:
+                                value = "Low"
+                            case 2:
+                                value = "Medium"
+                            case 3:
+                                value = "High"
+                            case 4:
+                                value = "Critical"
+                    vulnerability.update({key: value})
                 vulnerabilities.append({category: vulnerability})
         return {"categories": categories, "descriptions": descriptions, "vulnerabilities": vulnerabilities}

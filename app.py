@@ -1,5 +1,6 @@
 from glob import escape
 from flask import Flask
+from flask_cors import CORS, cross_origin
 
 from scripts.wapiti_parser import parse
 from scripts.wapiti_scan import scan
@@ -8,6 +9,7 @@ from util.scan_manager import ScanManager
 scan_manager = ScanManager()
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/v1/*": {"origins": "*"}})
 
 # Scanning
 
@@ -15,8 +17,10 @@ app = Flask(__name__)
 @app.route('/v1/wapiti/scan', methods=['POST', 'GET'])
 def wapiti_scan():
     """Scan using Wapiti3's python package"""
-    scan_manager.spawn("wapiti", "some_ID", "SomeURL")
-    return "We are scanning right now! Please wait"
+    # scan_manager.spawn("wapiti", "some_ID", "SomeURL")
+    scan()
+    parsed = parse()
+    return parsed
 
 # Zap
 @app.route('/v1/zap/scan', methods=['POST', 'GET'])
@@ -31,6 +35,7 @@ def arachni_scan():
 # Settings
 @app.route('/v1/settings/save')
 def save_settings():
+    #TODO: Save setting to SettingManager
     return "Settings are not implemented yet! (-w-;)"
 @app.route('/v1/settings/load')
 def load_settings():
