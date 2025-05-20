@@ -29,5 +29,5 @@ def parse() -> dict:
                             case 4:
                                 value = "Critical"
                     vulnerability.update({key: value})
-                vulnerabilities.append({category: vulnerability})
+                vulnerabilities.append(vulnerability)
         return {"categories": categories, "descriptions": descriptions, "vulnerabilities": vulnerabilities}
