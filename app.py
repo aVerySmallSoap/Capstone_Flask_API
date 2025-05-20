@@ -1,6 +1,6 @@
 from glob import escape
-from flask import Flask
-from flask_cors import CORS, cross_origin
+from flask import Flask, request
+from flask_cors import CORS
 
 from scripts.wapiti_parser import parse
 from scripts.wapiti_scan import scan
@@ -14,11 +14,11 @@ cors = CORS(app, resources={r"/v1/*": {"origins": "*"}})
 # Scanning
 
 # Wapiti
-@app.route('/v1/wapiti/scan', methods=['POST', 'GET'])
+@app.route('/v1/wapiti/scan', methods=['POST'])
 def wapiti_scan():
     """Scan using Wapiti3's python package"""
     # scan_manager.spawn("wapiti", "some_ID", "SomeURL")
-    scan()
+    scan(request.get_json()['url'])
     parsed = parse()
     return parsed
 
