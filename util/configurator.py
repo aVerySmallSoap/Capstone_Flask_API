@@ -13,9 +13,10 @@ class Configurator:
     _required_args = ["wapiti", "-u", "-m", "-v", "0", "-f", "json", "-l", "1", "-o"]
 
     #default options
-    _default_modules:list = ["common","brute_login_form","nikto","xxe"]
+    _default_modules:list = ["common", "nikto"]
     _scan:str = "normal"
     _scan_time:int = 180
+    _concurrent_tasks:int = 2
 
     #Non-default options
     _modules: list = None
@@ -52,6 +53,10 @@ class Configurator:
         self._args.append(self._scan)
         self._args.append("--max-scan-time")
         self._args.append(str(self._scan_time))
+        self._args.append("--scope")
+        self._args.append("domain")
+        self._args.append("--tasks")
+        self._args.append(str(self._concurrent_tasks)) # May improve performance
         return self._args
 
     def _module_builder(self) -> LiteralString:
