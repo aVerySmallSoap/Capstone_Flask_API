@@ -16,8 +16,10 @@ def parse() -> dict:
                 descriptions.append(data)
         # Get vulnerabilities
         for category in categories:
+            print(category, len(wapiti_report["vulnerabilities"][category]))
+            _arr = []
             for vulnerability in wapiti_report["vulnerabilities"][category]:
-                for key, value in vulnerability.items(): # Normalize levels into CVE standard format
+                for key, value in vulnerability.items():  # Normalize levels into CVE standard format
                     if key == "level":
                         match value:
                             case 1:
@@ -29,5 +31,6 @@ def parse() -> dict:
                             case 4:
                                 value = "Critical"
                     vulnerability.update({key: value})
-                vulnerabilities.append(vulnerability)
+                _arr.append(vulnerability)
+            vulnerabilities.append(_arr)
         return {"categories": categories, "descriptions": descriptions, "vulnerabilities": vulnerabilities}
