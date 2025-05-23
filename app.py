@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 from scripts.wapiti_parser import parse
 from scripts.wapiti_scan import scan
-from util.scan_manager import ScanManager
+from managers.scan_manager import ScanManager
 
 scan_manager = ScanManager()
 
