@@ -1,4 +1,5 @@
 from typing import LiteralString
+from managers.report_manager import ReportManager
 
 #TODO: Change default modules so scanning will be faster
 #TODO: Limit the scan to at least 10 pages and with a depth of 3
@@ -9,6 +10,7 @@ class Configurator:
     Any additional arguments passed to this class are passed to wapiti.
     This class provides basic module arguments for a wapiti scan, however, it can be manually overridden.
     """
+    _report_manager = ReportManager()
     #Required arguments
     _required_args = ["wapiti", "-u", "-m", "-v", "0", "-f", "json", "-l", "1", "-o"]
 
@@ -48,7 +50,8 @@ class Configurator:
                     if i == 2:
                         self._args.append(modules)
                     i +=1
-        self._args.append("./reports/test.json") #default path
+        self._report_manager.generate()
+        self._args.append(self._report_manager.build()) #default path
         self._args.append("-S")
         self._args.append(self._scan)
         self._args.append("--max-scan-time")
