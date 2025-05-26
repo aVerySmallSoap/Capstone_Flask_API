@@ -1,3 +1,4 @@
+from datetime import datetime
 from glob import escape
 from flask import Flask, request
 from flask_cors import CORS
@@ -5,8 +6,10 @@ from flask_cors import CORS
 from managers.report_manager import ReportManager
 from scripts.wapiti_parser import parse
 from scripts.wapiti_scan import scan
+from util.db import Database
 
 _report_manager = ReportManager()
+_db = Database()
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/v1/*": {"origins": "*"}})
@@ -18,10 +21,13 @@ cors = CORS(app, resources={r"/v1/*": {"origins": "*"}})
 def wapiti_scan():
     """Scan using Wapiti3's python package"""
     # scan_manager.spawn("wapiti", "some_ID", "SomeURL")
-    _report_manager.generate()
+    _scan_start = datetime.now()
+    _date_formated = _scan_start.strftime("%Y%m%d_%I-%M-%S")
+    _report_manager.generate(_date_formated)
     path = _report_manager.build()
     scan(request.get_json()['url'], path)
     parsed = parse(path)
+    _db.insert_wapiti_report(_scan_start, path)
     return parsed
 
 # Zap

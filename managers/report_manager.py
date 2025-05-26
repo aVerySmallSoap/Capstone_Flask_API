@@ -1,7 +1,4 @@
 #TODO: Complete this report manager
-#TODO: NOTE! THIS IS NOT A REPLACEMENT FOR THE DATABASE, INSTEAD IT MANAGES THE NAMING AND PATHS OF THE REPORTS FOR REFERENCE AND STORAGE
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
 class ReportManager:
     """Manages the naming and local paths of generated reports."""
@@ -12,9 +9,8 @@ class ReportManager:
     def __init__(self):
         pass
 
-    def generate(self):
+    def generate(self, date):
         """Generates a name and path for the report. The naming scheme is: YYYYMMDD_HH-SS"""
-        date = datetime.now().strftime("%Y%m%d_%I-%M-%S")
         tmp:list = [self._local_path, date]
         if len(self._reports) > 0: #increment pointer only if there is one report
             self.pointer+=1
