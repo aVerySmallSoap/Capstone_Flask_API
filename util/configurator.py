@@ -15,7 +15,7 @@ class Configurator:
     _required_args = ["wapiti", "-u", "-m", "-v", "0", "-f", "json", "-l", "1", "-o"]
 
     #default options
-    _default_modules:list = ["common", "nikto"]
+    _default_modules:list = ["common"]
     _scan:str = "normal"
     _scan_time:int = 180
     _concurrent_tasks:int = 2
@@ -27,6 +27,9 @@ class Configurator:
     #final configuration
     _args = None
 
+    #Non-shit
+    _path:str = None
+
     def set_modules(self, _modules:list = None):
         self._modules = _modules
 
@@ -35,6 +38,12 @@ class Configurator:
             print("something went wrong")
         else:
             self._url = _url
+
+    def set_path(self, _path:str = None):
+        if _path is None:
+            print("something went wrong")
+        else:
+            self._path = _path
 
     def configure(self) -> list:
         """Runs a wapiti scan with the class' built configuration"""
@@ -50,8 +59,7 @@ class Configurator:
                     if i == 2:
                         self._args.append(modules)
                     i +=1
-        self._report_manager.generate()
-        self._args.append(self._report_manager.build()) #default path
+        self._args.append(self._path) #default path
         self._args.append("-S")
         self._args.append(self._scan)
         self._args.append("--max-scan-time")

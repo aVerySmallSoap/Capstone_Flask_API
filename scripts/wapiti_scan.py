@@ -3,7 +3,7 @@ import subprocess
 
 # Update wapiti
 #TODO: TRACK OF VULN DATABASE UPDATES
-def scan(url) -> int:
+def scan(url, path) -> int:
     """Activate a scan using wapiti. Returns 1 if successful, 0 otherwise."""
     # process = subprocess.Popen(["wapiti", "--update"])
     # process.wait()
@@ -12,6 +12,7 @@ def scan(url) -> int:
     # Start running config
     config = Configurator()
     config.set_url(url)
+    config.set_path(path)
     test = config.configure()
     p = subprocess.Popen(test)
     p.wait()

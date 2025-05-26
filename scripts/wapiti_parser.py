@@ -1,7 +1,8 @@
 import json
 
-def parse() -> dict:
-    with open("./reports/test.json", "r") as report:
+def parse(path) -> dict:
+
+    with open(path, "r") as report:
         wapiti_report = json.load(report)
         categories = []
         descriptions = []

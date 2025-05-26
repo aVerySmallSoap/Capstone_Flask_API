@@ -14,7 +14,7 @@ class ReportManager:
 
     def generate(self):
         """Generates a name and path for the report. The naming scheme is: YYYYMMDD_HH-SS"""
-        date = datetime.now(tz=ZoneInfo("Asia/Manila")).strftime("%Y%m%d_%I-%M-%S")
+        date = datetime.now().strftime("%Y%m%d_%I-%M-%S")
         tmp:list = [self._local_path, date]
         if len(self._reports) > 0: #increment pointer only if there is one report
             self.pointer+=1
