@@ -9,7 +9,7 @@ import uuid
 class Database:
 
     _engine = None
-    _url = "postgresql+psycopg2://postgres:root@localhost:8100/restack"
+    _url = "postgresql+psycopg2://postgres:root@localhost:5432/restack"
     _Base = DeclarativeBase()
 
     def __int__(self):
