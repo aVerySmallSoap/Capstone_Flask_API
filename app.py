@@ -4,8 +4,9 @@ from flask import Flask, request
 from flask_cors import CORS
 
 from managers.report_manager import ReportManager
-from scripts.wapiti_parser import parse
-from scripts.wapiti_scan import scan
+from parsers.history_parser import history_parse
+from parsers.wapiti_parser import parse
+from scanners.wapiti_scan import scan
 from util.db import Database
 
 _report_manager = ReportManager()
@@ -58,9 +59,9 @@ def wapiti_load_settings():
     return "Wapiti settings are not implemented yet! (-w-;)"
 
 # Fetch data
-@app.route('/v1/report/load')
-def load_report():
-    return "Consolidated reports are not implemented yet! (-w-;)"
+@app.route('/v1/history/load')
+def load_history():
+    return history_parse()
 
 @app.route('/v1/report/<report_id>')
 def get_report(report_id):

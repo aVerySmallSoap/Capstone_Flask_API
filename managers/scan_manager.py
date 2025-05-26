@@ -1,6 +1,4 @@
-import datetime
-
-from scripts.wapiti_scan import scan
+from scanners.wapiti_scan import scan
 
 class ScanManager:
     """Manages scans from client requests"""

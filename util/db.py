@@ -19,10 +19,10 @@ class Database:
         """Check if the database exists, if not, create it"""
         if not database_exists(self._url):
             create_database(self._url)
-            self._engine = create_engine(self._url, echo=True)
+            self._engine = create_engine(self._url)
             return self._engine
         else:
-            self._engine = create_engine(self._url, echo=True)
+            self._engine = create_engine(self._url)
             return self._engine
 
     def migrate(self):
