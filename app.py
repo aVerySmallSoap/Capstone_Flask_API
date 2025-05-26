@@ -4,7 +4,7 @@ from flask import Flask, request
 from flask_cors import CORS
 
 from managers.report_manager import ReportManager
-from parsers.history_parser import history_parse
+from parsers.history_parser import history_parse, fetch_report
 from parsers.wapiti_parser import parse
 from scanners.wapiti_scan import scan
 from util.db import Database
@@ -68,10 +68,10 @@ def get_report(report_id):
     return f"{escape(report_id)} should not exist! We have not even implemented this yet! (-w-;)"
 
 # Wapiti
-@app.route('/v1/wapiti/report')
-def wapiti_report():
-    report = parse()
-    return report
+@app.route('/v1/wapiti/report/<report_id>')
+def wapiti_report(report_id):
+    report = fetch_report(report_id)
+    return parse(report)
 
 @app.route('/v1/wapiti/status/<user>')
 def wapiti_check(userid):
